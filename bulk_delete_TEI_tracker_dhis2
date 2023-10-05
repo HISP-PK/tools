@@ -2,7 +2,7 @@
 
 // Basic authentication credentials
 $username = 'admin';
-$password = 'District_1';
+$password = 'district';
 
 // Establish a database connection (replace these variables with your database credentials)
 $servername = "localhost";
