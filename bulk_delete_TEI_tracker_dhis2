@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
         $orgunit_id = $row["orgunit_id"];
 
         // URL for the GET request with dynamic orgunit_id
-        $get_url = "https://mercycorps.pakdhis2.org/api/trackedEntityInstances.json?ou={$orgunit_id}&program=Lt6P15ps7f6&fields=trackedEntityInstance&pageSize=600";
+        $get_url = "https://dhis2link.org/api/trackedEntityInstances.json?ou={$orgunit_id}&program=Lt6P15ps7f6&fields=trackedEntityInstance&pageSize=600";
 
         // Initialize cURL session for GET request
         $curl = curl_init();
@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
         if ($get_response) {
             // Assuming you want to proceed with the DELETE request for the data obtained
             // Initialize cURL session for POST request
-            $post_url = 'https://mercycorps.pakdhis2.org/api/trackedEntityInstances?strategy=DELETE';
+            $post_url = 'https://dhis2link.org/api/trackedEntityInstances?strategy=DELETE';
 
             $post_curl = curl_init();
 
