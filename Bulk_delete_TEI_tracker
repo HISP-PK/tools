@@ -43,13 +43,12 @@ if ($result->num_rows > 0) {
             CURLOPT_USERPWD => $username . ':' . $password,
         ));
 
-        // Execute GET request and get the response
+       
         $get_response = curl_exec($curl);
 
-        // Handle the GET response as needed (e.g., parse JSON data)
+       
         if ($get_response) {
-            // Assuming you want to proceed with the DELETE request for the data obtained
-            // Initialize cURL session for POST request
+           
             $post_url = 'https://dhis2link.org/api/trackedEntityInstances?strategy=DELETE';
 
             $post_curl = curl_init();
@@ -70,10 +69,10 @@ if ($result->num_rows > 0) {
                 ),
             ));
 
-            // Execute POST request and get the response
+           
             $post_response = curl_exec($post_curl);
 
-            // Handle the POST response as needed (e.g., check for success)
+           
             if ($post_response) {
                 echo "POST Request Response: " . $post_response;
             } else {
